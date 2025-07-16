@@ -1,139 +1,148 @@
+# Load the updated homepage HTML template styled like a professional services company
+updated_html = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tecturo Ltd</title>
   <style>
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #212529;
     }
-
     header {
-      background-color: #fff;
-      padding: 15px 30px;
+      background-color: #ffffff;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-
     header h1 {
-      font-size: 20px;
       margin: 0;
+      font-size: 22px;
     }
-
     nav a {
       margin-left: 20px;
       text-decoration: none;
       color: #333;
-      font-weight: bold;
+      font-weight: 500;
     }
-
+    nav a:hover {
+      color: #007bff;
+    }
     .hero {
-      background-color: #e7e7e7;
+      background-color: #e9ecef;
+      padding: 100px 20px;
       text-align: center;
-      padding: 120px 20px 100px;
     }
-
-    .hero h1 {
-      font-size: 2.5rem;
+    .hero h2 {
+      font-size: 36px;
       margin-bottom: 10px;
-      color: #111;
     }
-
     .hero p {
-      font-size: 1.2rem;
-      color: #444;
+      font-size: 18px;
+      color: #666;
     }
-
     section {
       padding: 60px 20px;
       max-width: 1000px;
-      margin: 0 auto;
+      margin: auto;
     }
-
     h2 {
-      text-align: left;
+      font-size: 28px;
       color: #222;
     }
-
     ul {
+      margin-top: 10px;
       padding-left: 20px;
     }
-
     footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 20px;
       text-align: center;
-      padding: 30px 20px;
-      background-color: #f0f0f0;
-      font-size: 0.9rem;
-      color: #777;
+    }
+    footer p {
+      margin: 5px 0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Tecturo Ltd</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#industries">Industries</a>
-      <a href="#careers">Careers</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Expert Engineering & Automation Solutions</h1>
-    <p>Innovative design, prototyping, and smart manufacturing.</p>
-  </section>
+<header>
+  <h1>Tecturo Ltd</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#industries">Industries</a>
+    <a href="#careers">Careers</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <section id="about">
-    <h2>About Tecturo</h2>
-    <p>
-      Tecturo Ltd is a UK-based engineering company specializing in cutting-edge manufacturing process development,
-      equipment prototyping, and smart automation solutions for modern industries.
-    </p>
-  </section>
+<section class="hero">
+  <h2>Expert Engineering & Automation Solutions</h2>
+  <p>Innovative design, prototyping, and smart manufacturing.</p>
+</section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Precision CNC Machining</li>
-      <li>Design for Manufacturability (DFM)</li>
-      <li>Fixture and Tooling Design</li>
-      <li>Automation and Robotics Integration</li>
-      <li>Prototyping and Small Batch Manufacturing</li>
-    </ul>
-  </section>
+<section id="about">
+  <h2>About Tecturo</h2>
+  <p>Tecturo Ltd is a UK-based engineering company specializing in cutting-edge manufacturing process development, equipment prototyping, and smart automation solutions for modern industries.</p>
+</section>
 
-  <section id="industries">
-    <h2>Industries We Serve</h2>
-    <p>
-      Automotive, Aerospace, Medical Devices, Consumer Electronics, Renewable Energy, and more.
-    </p>
-  </section>
+<section id="services">
+  <h2>Our Services</h2>
+  <ul>
+    <li>Precision CNC Machining</li>
+    <li>Design for Manufacturability (DFM)</li>
+    <li>Fixture and Tooling Design</li>
+    <li>Custom Automation Systems</li>
+    <li>Rapid Prototyping</li>
+    <li>Production Line Optimization</li>
+  </ul>
+</section>
 
-  <section id="careers">
-    <h2>Careers</h2>
-    <p>We're always looking for skilled engineers and technicians. Email your CV to <strong>careers@tecturo.co.uk</strong>.</p>
-  </section>
+<section id="industries">
+  <h2>Industries We Serve</h2>
+  <ul>
+    <li>Medical Devices</li>
+    <li>Aerospace</li>
+    <li>Automotive</li>
+    <li>Consumer Electronics</li>
+    <li>Renewable Energy</li>
+  </ul>
+</section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> info@tecturo.co.uk</p>
-    <p><strong>Website:</strong> www.tecturo.co.uk</p>
-    <p><strong>Headquartered:</strong> United Kingdom</p>
-  </section>
+<section id="careers">
+  <h2>Careers</h2>
+  <p>We are always looking for innovative engineers and technical specialists. Contact us at <strong>careers@tecturo.co.uk</strong> to learn more.</p>
+</section>
 
-  <footer>
-    &copy; 2025 Tecturo Ltd. All rights reserved.
-  </footer>
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p><strong>Email:</strong> info@tecturo.co.uk</p>
+  <p><strong>Website:</strong> www.tecturo.co.uk</p>
+  <p><strong>Location:</strong> Headquartered in the United Kingdom</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Tecturo Ltd. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
+"""
+
+from pathlib import Path
+index_file = Path("/mnt/data/index.html")
+index_file.write_text(updated_html)
+
+index_file.name  # Return the file name for download or upload
