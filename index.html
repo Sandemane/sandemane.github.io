@@ -2,111 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tecturo Ltd | Precision Engineering</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tecturo Ltd</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
     body {
-      background-color: #f9f9f9;
-      color: #333;
+      margin: 0;
+      font-family: Arial, sans-serif;
       line-height: 1.6;
+      background-color: #f7f7f7;
+      color: #333;
     }
+
     header {
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
     }
+
     header h1 {
+      margin: 0;
       font-size: 1.5rem;
-      font-weight: 700;
     }
+
     nav a {
-      margin-left: 2rem;
+      margin-left: 20px;
       text-decoration: none;
       color: #333;
-      font-weight: 600;
+      font-weight: bold;
     }
+
     .hero {
-      background: url('https://images.unsplash.com/photo-1603398938378-b49c99b63668?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-      color: #fff;
-      padding: 6rem 2rem;
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1581092795360-37d09c84cfee?fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
     }
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 3rem;
+      border-radius: 12px;
+      color: white;
     }
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
+
+    .section {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 1rem;
     }
-    section h3 {
+
+    .section h2 {
       margin-bottom: 1rem;
-      font-size: 1.8rem;
       color: #111;
     }
+
     ul {
-      padding-left: 1.5rem;
+      padding-left: 1.2rem;
     }
-    ul li {
-      margin-bottom: 0.5rem;
-    }
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .contact-form button {
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 0.75rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
+
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: #222;
-      color: white;
-      margin-top: 2rem;
+      background-color: #f1f1f1;
+      font-size: 0.9rem;
     }
-    iframe {
-      border: 0;
-      width: 100%;
-      height: 300px;
-      margin-top: 2rem;
-    }
+
     @media (max-width: 768px) {
-      nav a {
-        margin-left: 1rem;
-      }
-      .hero h2 {
-        font-size: 2rem;
+      .hero-overlay {
+        padding: 2rem;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Tecturo Ltd</h1>
     <nav>
@@ -118,50 +96,39 @@
     </nav>
   </header>
 
-  <div class="hero">
-    <h2>Expert Engineering & Automation Solutions</h2>
-    <p>Innovative design, prototyping, and smart manufacturing.</p>
-  </div>
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Expert Engineering & Automation Solutions</h1>
+      <p>Innovative design, prototyping, and smart manufacturing.</p>
+    </div>
+  </section>
 
-  <section id="about">
-    <h3>About Tecturo</h3>
+  <section class="section" id="about">
+    <h2>About Tecturo</h2>
     <p>Tecturo Ltd is a UK-based engineering company specializing in cutting-edge manufacturing process development, equipment prototyping, and smart automation solutions for modern industries.</p>
   </section>
 
-  <section id="services">
-    <h3>Our Services</h3>
+  <section class="section" id="services">
+    <h2>Our Services</h2>
     <ul>
       <li>Precision CNC Machining</li>
       <li>Design for Manufacturability (DFM)</li>
-      <li>Fixture & Tooling Design</li>
-      <li>Prototype Development</li>
-      <li>Automated Process Integration</li>
+      <li>Fixture and Tooling Design</li>
+      <li>Automation & Robotics Integration</li>
+      <li>CAD/CAM and Simulation Services</li>
     </ul>
   </section>
 
-  <section id="industries">
-    <h3>Industries We Serve</h3>
-    <p>Medical Devices, Aerospace, Automotive, Electronics, Consumer Products, Energy, and Custom OEMs.</p>
-  </section>
-
-  <section id="careers">
-    <h3>Careers</h3>
-    <p>We're always looking for passionate engineers, technicians, and project managers. Email <a href="mailto:info@tecturo.co.uk">info@tecturo.co.uk</a> to learn more.</p>
-  </section>
-
-  <section id="contact">
-    <h3>Contact Us</h3>
-    <form class="contact-form" action="mailto:info@tecturo.co.uk" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19826.477675533777!2d-0.1277586!3d51.5073509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3331dddf07%3A0xbdb5f7c5ad35c30!2sLondon%2C%20UK!5e0!3m2!1sen!2sie!4v1721079167012!5m2!1sen!2sie" allowfullscreen></iframe>
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> info@tecturo.co.uk</p>
+    <p><strong>Website:</strong> www.tecturo.co.uk</p>
+    <p><strong>Headquartered in the United Kingdom</strong></p>
   </section>
 
   <footer>
     &copy; 2025 Tecturo Ltd. All rights reserved.
   </footer>
+
 </body>
 </html>
