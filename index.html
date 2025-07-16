@@ -1,5 +1,3 @@
-# Load the updated homepage HTML template styled like a professional services company
-updated_html = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -139,10 +137,3 @@ updated_html = """
 
 </body>
 </html>
-"""
-
-from pathlib import Path
-index_file = Path("/mnt/data/index.html")
-index_file.write_text(updated_html)
-
-index_file.name  # Return the file name for download or upload
