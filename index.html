@@ -2,32 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tecturo Ltd</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f7f7f7;
+      background-color: #f9f9f9;
       color: #333;
     }
 
     header {
-      background-color: white;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 1rem 2rem;
+      background-color: #fff;
+      padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 1px solid #ddd;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
     header h1 {
+      font-size: 20px;
       margin: 0;
-      font-size: 1.5rem;
     }
 
     nav a {
@@ -38,53 +37,47 @@
     }
 
     .hero {
-      position: relative;
-      background: url('https://images.unsplash.com/photo-1581092795360-37d09c84cfee?fit=crop&w=1600&q=80') center/cover no-repeat;
-      height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background-color: #e7e7e7;
       text-align: center;
+      padding: 120px 20px 100px;
     }
 
-    .hero-overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 3rem;
-      border-radius: 12px;
-      color: white;
-    }
-
-    .section {
-      max-width: 900px;
-      margin: 4rem auto;
-      padding: 0 1rem;
-    }
-
-    .section h2 {
-      margin-bottom: 1rem;
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
       color: #111;
     }
 
+    .hero p {
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: left;
+      color: #222;
+    }
+
     ul {
-      padding-left: 1.2rem;
+      padding-left: 20px;
     }
 
     footer {
       text-align: center;
-      padding: 2rem;
-      background-color: #f1f1f1;
+      padding: 30px 20px;
+      background-color: #f0f0f0;
       font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero-overlay {
-        padding: 2rem;
-      }
+      color: #777;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Tecturo Ltd</h1>
     <nav>
@@ -97,52 +90,50 @@
   </header>
 
   <section class="hero">
-    <div class="hero-overlay">
-      <h1>Expert Engineering & Automation Solutions</h1>
-      <p>Innovative design, prototyping, and smart manufacturing.</p>
-    </div>
+    <h1>Expert Engineering & Automation Solutions</h1>
+    <p>Innovative design, prototyping, and smart manufacturing.</p>
   </section>
 
-  <section class="section" id="about">
+  <section id="about">
     <h2>About Tecturo</h2>
-    <p>Tecturo Ltd is a UK-based engineering company specializing in cutting-edge manufacturing process development, equipment prototyping, and smart automation solutions for modern industries.</p>
+    <p>
+      Tecturo Ltd is a UK-based engineering company specializing in cutting-edge manufacturing process development,
+      equipment prototyping, and smart automation solutions for modern industries.
+    </p>
   </section>
 
-  <section class="section" id="services">
+  <section id="services">
     <h2>Our Services</h2>
     <ul>
       <li>Precision CNC Machining</li>
       <li>Design for Manufacturability (DFM)</li>
       <li>Fixture and Tooling Design</li>
-      <li>Automation & Robotics Integration</li>
-      <li>CAD/CAM and Simulation Services</li>
+      <li>Automation and Robotics Integration</li>
+      <li>Prototyping and Small Batch Manufacturing</li>
     </ul>
   </section>
 
-  <section class="section" id="contact">
+  <section id="industries">
+    <h2>Industries We Serve</h2>
+    <p>
+      Automotive, Aerospace, Medical Devices, Consumer Electronics, Renewable Energy, and more.
+    </p>
+  </section>
+
+  <section id="careers">
+    <h2>Careers</h2>
+    <p>We're always looking for skilled engineers and technicians. Email your CV to <strong>careers@tecturo.co.uk</strong>.</p>
+  </section>
+
+  <section id="contact">
     <h2>Contact</h2>
     <p><strong>Email:</strong> info@tecturo.co.uk</p>
     <p><strong>Website:</strong> www.tecturo.co.uk</p>
-    <p><strong>Headquartered in the United Kingdom</strong></p>
+    <p><strong>Headquartered:</strong> United Kingdom</p>
   </section>
 
   <footer>
     &copy; 2025 Tecturo Ltd. All rights reserved.
   </footer>
-
 </body>
 </html>
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.5);
-  z-index: 1;
-}
-.hero h1, .hero p {
-  position: relative;
-  z-index: 2;
-  color: white;
-}
-
