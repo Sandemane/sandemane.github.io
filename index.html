@@ -1,3 +1,7 @@
+from pathlib import Path
+
+# Save the provided HTML content into a file named 'index.html'
+html_content = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,117 +10,108 @@
   <title>Tecturo Ltd</title>
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
       font-family: Arial, sans-serif;
-      color: #111;
-      background-color: #fff;
+      line-height: 1.6;
+      background-color: #f8f8f8;
+      color: #333;
     }
 
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px 40px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 10;
     }
 
-    nav .logo {
-      font-weight: bold;
-      font-size: 1.5rem;
+    nav h1 {
+      font-size: 24px;
     }
 
     nav ul {
-      list-style: none;
       display: flex;
-      gap: 1.5rem;
+      gap: 20px;
+      list-style: none;
     }
 
     nav ul li a {
       text-decoration: none;
-      color: #111;
-      font-weight: 500;
+      color: #333;
+      font-weight: bold;
     }
 
-    .hero {
-      background-image: url('https://images.unsplash.com/photo-1581091870620-eb09f0a3ca9c?auto=format&fit=crop&w=1950&q=80');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+    .hero-section {
+      background: url('tecturo_bg.jpg') no-repeat center center/cover;
       height: 100vh;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      position: relative;
       text-align: center;
-      color: white;
-      padding: 2rem;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 8px;
+    }
+
+    .overlay h1 {
+      font-size: 40px;
+      color: white;
+      margin-bottom: 15px;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     }
 
-    .hero p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    .overlay p {
+      font-size: 18px;
+      color: #eee;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
 
-    .hero a.button {
+    .cta-button {
+      padding: 12px 24px;
       background-color: #ff6600;
       color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s ease;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px #000;
     }
 
-    .hero a.button:hover {
-      background-color: #cc5200;
-    }
-
-    .section {
-      padding: 4rem 2rem;
+    section {
+      padding: 60px 40px;
       max-width: 1000px;
       margin: auto;
     }
 
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .section ul {
-      margin-top: 1rem;
-      line-height: 1.8;
+    h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
     }
 
     footer {
       text-align: center;
-      padding: 1rem;
-      background: #f5f5f5;
-      color: #666;
-      margin-top: 3rem;
+      padding: 20px;
+      background-color: #222;
+      color: white;
     }
   </style>
 </head>
 <body>
-
   <nav>
-    <div class="logo">Tecturo Ltd</div>
+    <h1>Tecturo Ltd</h1>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
@@ -126,34 +121,49 @@
     </ul>
   </nav>
 
-  <section class="hero">
-    <h1>Expert Engineering & Automation Solutions</h1>
-    <p>Innovative design, prototyping, and smart manufacturing.</p>
-    <a href="#contact" class="button">Get in Touch</a>
-  </section>
+  <header class="hero-section">
+    <div class="overlay">
+      <h1>Expert Engineering & Automation Solutions</h1>
+      <p>Innovative design, prototyping, and smart manufacturing.</p>
+      <a href="#contact" class="cta-button">Get in Touch</a>
+    </div>
+  </header>
 
-  <section class="section" id="about">
+  <section id="about">
     <h2>About Tecturo</h2>
     <p>
-      Tecturo Ltd is a UK-based engineering company specializing in cutting-edge manufacturing process development, 
-      equipment prototyping, and smart automation solutions for modern industries.
+      Tecturo Ltd is a Clonmel, Co. Tipperary-based engineering company specializing in
+      cutting-edge manufacturing process development, equipment prototyping, and smart automation
+      solutions for modern industries.
     </p>
   </section>
 
-  <section class="section" id="services">
+  <section id="services">
     <h2>Our Services</h2>
     <ul>
       <li>Precision CNC Machining</li>
       <li>Design for Manufacturability (DFM)</li>
       <li>Fixture and Tooling Design</li>
-      <li>Custom Automation & Robotics</li>
-      <li>Prototyping and R&D Support</li>
+      <li>Automation Systems Integration</li>
+      <li>Rapid Prototyping</li>
     </ul>
   </section>
 
-  <footer>
-    &copy; 2025 Tecturo Ltd – All rights reserved.
-  </footer>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:info@tecturo.co.uk">info@tecturo.co.uk</a></p>
+    <p>Location: Clonmel, Co. Tipperary, Ireland</p>
+  </section>
 
+  <footer>
+    <p>© 2025 Tecturo Ltd. All rights reserved.</p>
+  </footer>
 </body>
 </html>
+"""
+
+# Save the file
+file_path = "/mnt/data/index.html"
+Path(file_path).write_text(html_content)
+
+file_path
