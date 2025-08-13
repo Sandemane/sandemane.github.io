@@ -6,112 +6,97 @@
   <title>PERAG SOLUTIONS LTD</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
       color: white;
-      background-color: #111;
       text-align: center;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    header {
-      position: relative;
-      height: 100vh;
+      background: #111;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-      animation: fadeInUp 1.5s ease-in-out;
     }
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .hero {
+      position: relative;
+      padding: 120px 20px 80px;
+      background: url('https://tse4.mm.bing.net/th/id/OIP.Y0snND2qqUpuwh-hG8ab4gHaE8?pid=Api') center/cover no-repeat;
+      background-size: cover;
     }
-    header::before {
+    .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: 
-        linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.45)),
-        url('https://tse4.mm.bing.net/th/id/OIP.Y0snND2qqUpuwh-hG8ab4gHaE8?pid=Api') center/cover no-repeat;
-      z-index: -1;
-      animation: fadeIn 2s ease-in-out;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
     }
     h1 {
       font-size: 3rem;
-      margin: 0;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
     }
     h2 {
       font-size: 1.5rem;
-      font-weight: 300;
+      font-weight: normal;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+    a.button {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #f0db4f;
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 15px;
+      transition: background 0.3s ease;
+    }
+    a.button:hover {
+      background: #ffcc00;
     }
     section {
-      padding: 40px 20px;
       background-color: #222;
-      animation: fadeIn 2s ease-in-out;
-    }
-    section h3 {
-      color: #f0db4f;
-      font-size: 1.8rem;
+      padding: 40px 20px;
+      margin: 20px;
+      border-radius: 8px;
     }
     footer {
       background-color: #000;
       padding: 20px;
       font-size: 0.9rem;
       color: #ccc;
-      animation: fadeIn 2s ease-in-out;
-    }
-    a.button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #f0db4f;
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-    a.button:hover {
-      background: #ffcc00;
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>PERAG SOLUTIONS LTD</h1>
-    <h2>Mechanical Design & Process Engineering Experts</h2>
-    <a href="#contact" class="button">Get in Touch</a>
-  </header>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>PERAG SOLUTIONS LTD</h1>
+      <h2>Mechanical Design & Process Engineering Experts</h2>
+      <a href="#contact" class="button">Get in Touch</a>
+    </div>
+  </div>
 
   <section id="about">
-    <h3>About Us</h3>
+    <h2>About Us</h2>
     <p>Based in Milton Keynes, PERAG SOLUTIONS LTD delivers high-quality mechanical design, process engineering, and project management solutions for industrial and utility sectors.</p>
   </section>
 
   <section id="contact">
-    <h3>Contact Us</h3>
-    <p>Email: <a href="mailto:info@peragsolutions.co.uk">info@peragsolutions.co.uk</a></p>
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:info@peragsolutions.co.uk" style="color:#f0db4f;">info@peragsolutions.co.uk</a></p>
     <p>Phone: +44 1900 000000</p>
     <p>Location: Milton Keynes, United Kingdom</p>
   </section>
 
   <footer>
-    <p>© 2025 PERAG SOLUTIONS LTD. All rights reserved.</p>
+    <p>&copy; 2025 PERAG SOLUTIONS LTD. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
